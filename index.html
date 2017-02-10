@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bubble Shooter</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script type="text/javascript" src="js/modernizr.js">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+      <script type="text/javascript" src="js/ui.js"></script>
+
+
+</head>
+
+
+<script>
+    window.onload = function() {
+
+
+        if (jQuery) {
+            console.log("thertes jquery");
+            
+        } else {
+            console.log('no jquery')
+        };
+        $(function() {
+            var game = new bubbleShoot.Game();
+            game.init();
+        })
+
+    }
+
+
+    var check = function() {
+        if (!Modernizr) {
+            console.log("no moderizer");
+        } else {
+            console.log("there is moderizer");
+        }
+    };
+
+    check();
+
+    // replacement for modernizr.load*****************************
+    //
+    // if (Modernizr){
+    //     $.getScript("js/game.js")
+    //         //it worked! do something!
+    //         .done(function(){
+    //             console.log('game js loaded!!!!!!');
+    //         })
+    //         //it didn't work! do something!
+    //         .fail(function(){
+    //             console.log('game js not loaded');
+    //         });
+    // } else {
+    //     console.log('load from different source')
+    // }
+
+    // replacement for modernizr.load*****************************
+</script>
+
+<body>
+    <div id="page">
+        <div id="top-bar">
+            <p>top-bar</p>
+
+        </div>
+
+        <div id="game">
+            <p>this is the game</p>
+        </div>
+
+        <div id="footer-bar">
+            <p>bottom bar</p>
+        </div>
+
+        <div id="start-game" class="dialog">
+            <div id="start-game-message">
+                <h2>Start a New Game</h2>
+            </div>
+
+            <div class="but-start-game">
+                New Game
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
