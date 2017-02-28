@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <title>Bubble Shooter</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/game.css" type="text/css">
     <script type="text/javascript" src="js/modernizr.js">
     </script>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/game.js"></script>
-      <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/bubble.js"></script>
 
 
 </head>
@@ -19,10 +21,9 @@
 <script>
     window.onload = function() {
 
-
         if (jQuery) {
             console.log("thertes jquery");
-            
+
         } else {
             console.log('no jquery')
         };
@@ -30,9 +31,7 @@
             var game = new bubbleShoot.Game();
             game.init();
         })
-
     }
-
 
     var check = function() {
         if (!Modernizr) {
@@ -72,6 +71,8 @@
 
         <div id="game">
             <p>this is the game</p>
+            <div id="board"></div>
+          
         </div>
 
         <div id="footer-bar">
